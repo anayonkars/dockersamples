@@ -1,0 +1,259 @@
+    1  sudo vi /etc/update-manager/release-upgrades
+    2  sudo vi /etc/apt/sources.list
+    3  sudo apt update && sudo apt dist-upgrade -y
+    4  sudo do-release-upgrade 
+    5  sudo apt install neofetch -y
+    6  sudo neofetch 
+    7  sudo apt update && sudo apt dist-upgrade -y
+    8  sudo apt install ubuntu-restricted-extras ubuntu-restricted-addons mvn git scala gradle openjdk-8-jdk openjdk-8-jre -y
+    9  sudo apt install ubuntu-restricted-extras ubuntu-restricted-addons maven git scala gradle openjdk-8-jdk openjdk-8-jre -y
+   10  sudo apt install gnome-tweak-tool -y
+   11  sudo apt-get remove docker docker-engine docker.io containerd runc
+   12  sudo apt-get update
+   13  sudo apt-get install     apt-transport-https     ca-certificates     curl     gnupg-agent     software-properties-common
+   14  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+   15  sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   16     $(lsb_release -cs) \
+   17     stable"
+   18  sudo apt update 
+   19  sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   20     bionic \
+   21     stable"
+   22  sudo apt update 
+   23  sudo apt-get install docker-ce docker-ce-cli containerd.io
+   24  apt-cache madison docker-ce
+   25  sudo apt install docker-ce=5:19.03.8~3-0~ubuntu-bionic docker-ce-clie=5:19.03.8~3-0~ubuntu-bionic containerd.io -y
+   26  sudo apt install docker-ce=5:19.03.8~3-0~ubuntu-bionic docker-ce-cli=5:19.03.8~3-0~ubuntu-bionic containerd.io -y
+   27  sudo docker run hello-world
+   28  docker run -it ubuntu bash
+   29  sudo docker run -it ubuntu bash
+   30  neofetch 
+   31  java -version
+   32  sudo update-alternatives --config java
+   33  javac -version
+   34  java -version
+   35  sudo apt update && sudo apt dist-upgrade 
+   36  sudo apt update && sudo apt dist-upgrade -y
+   37  neofetch 
+   38  sudo apt update && sudo apt dist-upgrade -y
+   39  sudo docker run hello-world
+   40  sudo docker run -it ubuntu bash
+   41  sudo apt install docker-compose -y
+   42  sudo groupadd docker
+   43  sudo usermod -aG docker $USER
+   44  sudo systemctl enable docker
+   45  docker run hello-world
+   46  sudo docker run hello-world
+   47  sudo docker images
+   48  sudo docker images | cut -d '\t' -f1
+   49  sudo docker images | cut -d '\\t' -f1
+   50  sudo docker images | cut -d ' ' -f1
+   51  sudo docker images | cut -d ' ' -f2
+   52  sudo docker images -a
+   53  sudo docker images -a | awk '{pring $3}'
+   54  sudo docker images -a | awk '{print $3}'
+   55  sudo docker images -a | awk '{print $3}' | grep -v IMAGE
+   56  sudo docker images -a | awk '{print $3}' | grep -v IMAGE | xargs sudo docker rmi
+   57  sudo docker images purge
+   58  sudo docker images
+   59  sudo docker system prune -a
+   60  sudo docker iamges
+   61  sudo docker images
+   62  sudo docker run hello-world
+   63  sudo docker run -it ubuntu bash
+   64  neofetch
+   65  sudo docker system prune -a
+   66  sudo docker images
+   67  docker container ls
+   68  docker images
+   69  docker container ls -la
+   70  docker container rm eager_chatterjee
+   71  docker container stop eager_chatterjee
+   72  docker container ls -a
+   73  docker container rm eager_chatterjee
+   74  docker container ls -la
+   75  docker run hello-world
+   76  docker run -it ubuntu bash
+   77  neofetch
+   78  cd co
+   79  mkdir code
+   80  cd code/
+   81  mkdir docker
+   82  cd docker/
+   83  cat > hello.py
+   84  cat hello.py 
+   85  mv hello.py hello-world.py
+   86  sudo apt install python
+   87  docker run -v $(pwd):/src python:3 python /src/hello-world.py
+   88  docker container ls -a
+   89  docker container rm d7a3aa5a20dd
+   90  docker container ls -a
+   91  docker run -v $(pwd):/src --rm python:3 python /src/hello-world.py
+   92  docker container ls -a
+   93  docker ps -a -q
+   94  docker container rm $(docker ps -a -q)
+   95  docker container ls -a
+   96  docker images
+   97  docker images -a -q
+   98  docker images rm $(docker images -a -q)
+   99  docker images --help
+  100  vi hello-world.py 
+  101  cat hello-world.py 
+  102  docker run -v $(pwd):/src python:3 python /src/hello-world.py
+  103  vi hello-world.py 
+  104  docker run --rm -v $(pwd):/src python:3 python /src/hello-world.py
+  105  docker container ls
+  106  docker container ls -a
+  107  docker run hello-world
+  108  docker container ls
+  109  docker container ls -a
+  110  docker container rm $(docker container ps -a q)
+  111  docker container rm $(docker ps -a q)
+  112  docker container rm $(docker ps -a -q)
+  113  docker run -it --rm python:3
+  114  docker container ls -a
+  115  docker run -it --rm python:3 /bin/bash
+  116  docker container ls -la
+  117  docker run -it --rm node:latest /bin/bash
+  118  docker run --help
+  119  docker run --rm -d --name my_mysql -e MYSQL_ROOT_PASSWORD=some-pwd mysql:latest
+  120  docker container ls
+  121  docker exec -it my_mysql mysql -h localhost -u root -p
+  122  docker container ls
+  123  docker container stop my_mysql
+  124  docker container ls
+  125  docker run --rm --name my_mysql -e MYSQL_ROOT_PASSWORD=some-pwd mysql:latest
+  126  vi index.html
+  127  cat index.html 
+  128  docker exec -it my_mysql mysql -h localhost -u root -p
+  129  docker ps
+  130  docker container stop my_mysql 
+  131  docker ps
+  132  docker run --rm -d -v $(pwd):/usr/share/nginx/html -p 80:80 --name my_nginx nginx:latest
+  133  docker ps
+  134  docker exec -it my_nginx /bin/bash
+  135  docker ps
+  136  docker stop my_nginx 
+  137  docker ps
+  138  docker run --rm -d -v $(pwd):/usr/share/nginx/html -p 1234:80 --name my_nginx nginx:latest
+  139  docker ps
+  140  docker container stop my_nginx 
+  141  cd code/docker/
+  142  ls
+  143  vi hello-world.py 
+  144  docker run --rm -v $(pwd):/src python:3 python3 /src/hello-world.py
+  145  vi Dockerfile
+  146  cat Dockerfile 
+  147  docker build py_numpy .
+  148  docker build py_numpy -t .
+  149  docker build -t py_numpy .
+  150  mkdir numpy ubuntu
+  151  mv Dockerfile numpy/
+  152  cd ubuntu/
+  153  vi Dockerfile
+  154  cat Dockerfile 
+  155  docker build -t ubuntu_fun .
+  156  vi Dockerfile 
+  157  docker build -t ubuntu_fun .
+  158  vi Dockerfile 
+  159  docker build -t ubuntu_fun .
+  160  ls
+  161  docker image
+  162  docker images 
+  163  cd ..
+  164  docker run --rm -v $(pwd):/src python:3 python3 /src/hello-world.py
+  165  docker run --rm -v $(pwd):/src py_numpy python3 /src/hello-world.py
+  166  docker run --rm ubuntu_fun /bin/bash
+  167  docker run --rm -it ubuntu_fun /bin/bash
+  168  docker run --rm -it ubuntu_fun
+  169  docker ps
+  170  docker run -it ubuntu_fun
+  171  docker run -it ubuntu_fun /bin/bash
+  172  docker network create net_1
+  173  docker network ls
+  174  cat > run.py
+  175  docker run --rm -d --net net_1 --name my_py -v $(pwd):/src python:3 python3 /src/run.py
+  176  docker ps
+  177  docker run --rm -it --net net_1 node:latest /bin/bash
+  178  docker ps
+  179  docker container stop my_py 
+  180  docker network rm net_1 
+  181  docker network ls
+  182  docker run -d --rm -e MYSQL_ROOT_PASSWORD=abc123 --name my_mysql --net net_2 mysql:latest
+  183  docker network create net_2
+  184  docker run -d --rm -e MYSQL_ROOT_PASSWORD=abc123 --name my_mysql --net net_2 mysql:latest
+  185  docker run -it --rm -e MYSQL_ROOT_PASSWORD=abc123 --name my_mysql2 --net net_2 mysql:latest /bin/bash
+  186  docker ps
+  187  docker container stop my_mysql 
+  188  docker network ls
+  189  docker network rm net_2 
+  190  vi docker-compose.yml
+  191  docker-compose up 
+  192  vi docker-compose.yml 
+  193  gedit docker-compose.yml 
+  194  cat docker-compose.yml 
+  195  docker-compose up
+  196  vi docker-compose.yml 
+  197  docker-compose up 
+  198  docker-compose up -d
+  199  docker container ls
+  200  vi docker-compose.yml 
+  201  docker-compose up
+  202  docker container 
+  203  docker container ls
+  204  docker container ls -la
+  205  docker container rm my_mysql 
+  206  docker container ls -la
+  207  docker container rm my_ubuntu 
+  208  docker container ls -la
+  209  docker container rm my_py
+  210  docker container ls -la
+  211  docker containers
+  212  docker ps 
+  213  docker container ls -a
+  214  docker container rm $(docker ps -a -q)
+  215  docker container ls -a
+  216  docker-compose up -d
+  217  docker-compose ps 
+  218  docker container ls -a
+  219  docker container stop $(docker ps -aq)
+  220  docker container rm $(docker ps -aq)
+  221  mkdir docker-scaling
+  222  cd docker-scaling/
+  223  ls
+  224  gedit docker-compose.yml
+  225  ls
+  226  ls -la
+  227  mkdir py nginx
+  228  cd py/
+  229  ls
+  230  gedit app.py
+  231  ls
+  232  cat app.py 
+  233  cd ../nginx/
+  234  ls
+  235  gedit nginx.conf
+  236  cat nginx.conf 
+  237  cd ..
+  238  gedit docker-compose.yml
+  239  cat docker-compose.yml 
+  240  ls
+  241  gedit Dockerfile
+  242  cat Dockerfile 
+  243  docker-compose up --scale flask=12
+  244  vi Dockerfile 
+  245  docker container ls -a
+  246  docker container stop $(docker ps -aq)
+  247  docker container rm $(docker ps -aq)
+  248  docker container ls -a
+  249  docker-compose up --scale flask=12
+  250  cat Dockerfile 
+  251  docker system prune -a
+  252  docker-compose up --scale flask=12
+  253  vi py/app.py 
+  254  docker system prune -a
+  255  docker-compose up --scale flask=12
+  256  cd ..
+  257  history 
+  258  cd docker/
+  259  history > commands
